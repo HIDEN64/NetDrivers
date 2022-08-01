@@ -4,7 +4,7 @@ declare(strict_types=1);
 <html>
 <head>
    <?php
-   $title = 'System Info';
+   $title = 'Device Info';
    require('head.php'); ?>
 </head>
 <body>
