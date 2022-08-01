@@ -23,18 +23,15 @@ declare(strict_types=1);
 <hr>
 <?php include('nav.html'); ?>
 <hr>
+<?php
+   // @TODO: Somehow make it so the selected scope
+   //        persists when 'Submit' is clicked.
+?>
 <form action="search.php" method="post">
 	<input type="text" name="query">&nbsp;<input type="submit"><br>
-	<input type="radio" name="scope" checked="true"
-       <?php
-       // @TODO: This should be moved to a function. Furthermore, $scope is not defined
-       //        therefore I'm commenting this line out for the time being.
-       // - if (isset($scope) && $scope === 'system') echo 'checked';?>
-	       value="system">Systems<input type="radio" name="scope"
-      <?php // - if (isset($scope) && $scope=="device") echo "checked";?>
-	                                     value="device">Devices<input type="radio" name="scope"
-      <?php // - if (isset($scope) && $scope=="drivers") echo "checked";?>
-	                                                                   value="files">Filename
+  <input type="radio" name="scope" checked="true" value="system">Systems
+  <input type="radio" name="scope" value="device">Devices
+  <input type="radio" name="scope" value="files">Filename
 </form>
 <?php
 if (!isset($_POST['scope'])) {
