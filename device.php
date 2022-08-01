@@ -88,11 +88,11 @@ if (isset($_GET['id'])) {
          echo '</table><br>';
       }
    } else {
-      echo 'Invalid System ID';
+      echo 'Invalid Device ID';
    }
    $conn->close();
 } else {
-   echo '<b>Error:</b> No System ID Specified!';
+   echo '<b>Error:</b> No Device ID Specified!';
 }
 ?>
 <hr>
