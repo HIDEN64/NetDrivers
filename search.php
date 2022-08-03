@@ -35,6 +35,7 @@ declare(strict_types=1);
 </form>
 <?php
 if (!isset($_POST['scope'])) {
+   require('footer.php');
    return;
 }
 
@@ -129,18 +130,18 @@ switch ($queryScope) {
 $querytime = microtime(true) - $querytime;
 if ($result !== false) {
 
-   echo $result->num_rows . ' results for "' . $cleanquery . '" in ' . $queryScope . ' (took ' . round($querytime, 5) . 'ms)<hr>';
+   echo $result->num_rows . ' results for "' . $cleanquery . '" in ' . $queryScope . ' (took ' . round($querytime, 5) . 'ms)';
 
    if ($result->num_rows > 0) {
       // output data of each row
       foreach ($result->fetch_all(MYSQLI_ASSOC) as $row) {
-         echo listName($queryScope, $row);
          echo '<hr>';
+         echo listName($queryScope, $row);
       }
    } else {
       echo 'No Results for ' . $cleanquery;
    }
 }
-
 $conn->close();
+require('footer.php');
 ?>

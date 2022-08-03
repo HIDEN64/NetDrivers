@@ -22,7 +22,8 @@ declare(strict_types=1);
 <?php include('nav.html'); ?>
 <hr>
 <p>This page currently has no content. Use the above links to navigate the site!</p>
-<hr>
-<address>&copy; 2022 <a href="http://nickandfloppy.com/">nick and floppy</a></address>
+<?php
+require('footer.php');
+?>
 </body>
 </html>

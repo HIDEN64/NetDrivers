@@ -67,7 +67,7 @@ if (isset($_GET['id'])) {
 } else {
    echo 'No ID provided';
 }
-include('footer.php');
+require('footer.php');
 ?>
 </body>
 </html>

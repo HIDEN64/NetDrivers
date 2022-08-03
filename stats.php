@@ -26,7 +26,7 @@ require('creds.php');
 $conn = new mysqli(CONF["servername"], CONF["username"], CONF["password"], CONF["dbname"]);
 // Check connection
 if ($conn->connect_error) {
-   $diemsg = '<pre><i>Unable to retrieve database statistics!</i></pre><hr><p class="copyright"><i>Copyright <a href="https://nickandfloppy.com/" target="_blank">nick and floppy</a> ' . date('Y') . "</i></p>";
+   $diemsg = '<pre><i>Unable to retrieve database statistics!</i></pre>';
    die($diemsg);
 }
 
@@ -41,6 +41,7 @@ if ($result !== false) {
 }
 
 $conn->close();
+require('footer.php');
 ?>
 </body>
 </html>

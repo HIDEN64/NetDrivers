@@ -94,6 +94,7 @@ if (isset($_GET['id'])) {
 } else {
    echo '<b>Error:</b> No Device ID Specified!';
 }
+require('footer.php');
 ?>
 <hr>
 </body>

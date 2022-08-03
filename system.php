@@ -61,7 +61,7 @@ if (isset($_GET['id'])) {
 } else {
    echo '<b>Error:</b> No System ID Specified!';
 }
+require('footer.php');
 ?>
-<hr>
 </body>
 </html>
