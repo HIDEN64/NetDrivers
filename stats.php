@@ -1,15 +1,17 @@
 <?php
 declare(strict_types=1);
 ?>
-
+<html>
 <head>
-   <?php $title = 'Statistics';
+   <?php 
+   $title = 'Statistics';
    require('head.php'); ?>
 </head>
+<body>
 <a href="/">
 	<table>
 		<tr>
-			<td><img src="/favicon.png" width="50"></td>
+			<td><img src="favicon.png" width="50"></td>
 			<td><h1 style="margin: 0">NetDrivers</h1><i>Archiving Drivers Since February 2022</i></td>
 		</tr>
 	</table>
@@ -24,7 +26,7 @@ require('creds.php');
 $conn = new mysqli(CONF["servername"], CONF["username"], CONF["password"], CONF["dbname"]);
 // Check connection
 if ($conn->connect_error) {
-   $diemsg = '<pre><i>Unable to retrieve database statistics!</i></pre><i>Copyright <a href="https://nickandfloppy.com/">nick and floppy ' . date('Y');
+   $diemsg = '<pre><i>Unable to retrieve database statistics!</i></pre><hr><p class="copyright"><i>Copyright <a href="https://nickandfloppy.com/" target="_blank">nick and floppy</a> ' . date('Y') . "</i></p>";
    die($diemsg);
 }
 
@@ -40,3 +42,5 @@ if ($result !== false) {
 
 $conn->close();
 ?>
+</body>
+</html>
