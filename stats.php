@@ -24,7 +24,7 @@ require('creds.php');
 $conn = new mysqli(CONF["servername"], CONF["username"], CONF["password"], CONF["dbname"]);
 // Check connection
 if ($conn->connect_error) {
-   $diemsg = '<pre><i>Unable to retrieve database statistics!</i></pre><i>Copyright <a href="https://nickandfloppy.com/">nick and floppy ' . date('Y');
+   $diemsg = '<pre><i>Unable to retrieve database statistics!</i></pre><i>Copyright <a href="https://nickandfloppy.com/">nick and floppy ' . date('Y') . '</a></i>';
    die($diemsg);
 }
 
